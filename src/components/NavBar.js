@@ -9,7 +9,7 @@ const NavBar = () => {
     <a href="#">Accesorios</a>
     <a href="#">Contacto</a>
 </NavBar>
-  )
-}
+  ) ;
+} ;
 
 export default NavBar ; 

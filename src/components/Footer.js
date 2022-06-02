@@ -4,11 +4,11 @@ const Footer = () => {
   return (
 
     <Footer> 
-      <div>El mundo del rodaje- Todos los derechos reservados</div>
+      <h3>El mundo del rodaje- Todos los derechos reservados</h3>
      </Footer>
 
 
-  )
-}
+  ) ;
+} ;
 
 export default Footer ; 

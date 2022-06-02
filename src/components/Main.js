@@ -7,7 +7,7 @@ const Main = () => {
         HOME
       </h1>
     </Main>
-  )
-}
+  ) ;
+} ;
 
 export default Main ;
