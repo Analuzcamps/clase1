@@ -2,8 +2,13 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>El mundo del rodaje- Todos los derechos reservados</div>
+
+    <Footer> 
+      <div>El mundo del rodaje- Todos los derechos reservados</div>
+     </Footer>
+
+
   )
 }
 
-export default Footer
+export default Footer ; 

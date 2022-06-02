@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom/client';
 
 /*const App = () => "Hola Mundo usando JSX y Arrow Function"*/
 
-import App from "./App"
+import App from './App' 
 import "./estilo.css" 
 
 //Mostrar al app en el DOM (crea root donde la app se va a mostrar)

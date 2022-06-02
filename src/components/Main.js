@@ -2,8 +2,12 @@ import React from 'react'
 
 const Main = () => {
   return (
-    <h1>Home</h1>
+    <Main> 
+      <h1>
+        HOME
+      </h1>
+    </Main>
   )
 }
 
-export default Main
+export default Main ;
