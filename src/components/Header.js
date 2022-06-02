@@ -1,9 +1,9 @@
 import React from 'react'
 const Header = () => {
     return (
-        <Header>
+        <header>
             <h1> El Mundo Del Rodaje </h1>
-        </Header>
+        </header>
     ) ;
 } ;
 export default Header ;

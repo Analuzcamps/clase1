@@ -2,11 +2,11 @@ import React from 'react'
 
 const Main = () => {
   return (
-    <Main> 
+    <main> 
       <h1>
         HOME
       </h1>
-    </Main>
+    </main>
   ) ;
 } ;
 
