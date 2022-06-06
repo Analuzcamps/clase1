@@ -1,4 +1,4 @@
-//Traigo la libreria de Ract
+//Traigo la libreria de React
 
 import React from 'react';
 
@@ -14,8 +14,10 @@ import ReactDOM from 'react-dom/client';
 
 /*const App = () => "Hola Mundo usando JSX y Arrow Function"*/
 
-import App from './App' 
-import "./estilo.css" 
+import "./estilo.css" ;
+import 'bootstrap/dist/css/bootstrap.min.css';
+import App from './App' ;
+
 
 //Mostrar al app en el DOM (crea root donde la app se va a mostrar)
 

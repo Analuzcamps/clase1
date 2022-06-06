@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react' ;
 
 const Main = () => {
   return (
     <main> 
       <h1>
-        HOME
+        Home
       </h1>
+    
+  
     </main>
   ) ;
 } ;
