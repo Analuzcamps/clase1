@@ -15,7 +15,6 @@ import ReactDOM from 'react-dom/client';
 /*const App = () => "Hola Mundo usando JSX y Arrow Function"*/
 
 import "./estilo.css" ;
-import 'bootstrap/dist/css/bootstrap.min.css';
 import App from './App' ;
 
 

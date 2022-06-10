@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer';
 import Main from './components/Main' ;
 import Footer from './components/Footer';
 import NavBar from './components/NavBar' ;
+import ItemCount from './components/ItemCount';
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
        <>
       <ItemListContainer 
     greeting="Bienvenido al mundo del rodaje!" />
+    <ItemCount/>
 
     </>
        <Main />
