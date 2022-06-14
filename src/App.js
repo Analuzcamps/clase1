@@ -15,7 +15,6 @@ const App = () => {
        <>
       <ItemListContainer 
     greeting="Bienvenido al mundo del rodaje!" />
-    <ItemCount/>
 
     </>
        <Main />
