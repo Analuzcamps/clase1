@@ -1,26 +1,39 @@
 import React, { useEffect, useState } from 'react'
-import customFetch from '../utils/customFetch'
 import ItemCount from './ItemCount'
 import productos from '../utils/productos'
 import ItemList from './ItemList'
 
 
-function ItemListContainer() {
-  const [items, setItems] = useState([])
+const ItemListContainer = ({greeting})=> {
+  const [Item, setItems] = useState([])
 
   useEffect(() => {
-    customFetch(3000, productos) //simulamos carga de datos
-    .then(resultado => setItems(resultado)) 
-  }, [items])
-  return (
-    <>
-      <ItemList productos={items}/>
-      <ItemCount stock={5} initial={1} onAdd={'ondAdd'}/>
+
+   const MockAsync = new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(productos)
+      }, 3000)
+    })
+   
+    MockAsync.then(productos => { 
+      setItems(productos) 
+    })
+  }, [])
   
+
+ return (
+      <>
+      <h2>{greeting}</h2>
+      <ItemList productos={Item}/>
+      <ItemCount stock={5} initial={1} onAdd={'ondAdd'}/>
     </>
-    
-  )
+      
+    )
+
 }
+  
+   
+
 
 
 

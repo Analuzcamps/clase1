@@ -3,15 +3,17 @@ import React from 'react'
 import Item from './Item'
 
 
+
 //nos va a traer cuantas cards de productos tengamos
 
-const ItemList = ({products}) => {
+const ItemList = ({productos}) => {
   return (
-    products.map (p=> 
+    productos.map (p=> 
         <Item
         id={p.id}
         name={p.name}
-        image={p.image}/>)
+        image={p.image}
+        />)
   )
 }
 
