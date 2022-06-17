@@ -1,3 +1,4 @@
+
 const productos= [
 
     {
@@ -21,5 +22,24 @@ const productos= [
     },
      
 ]
+
+const producto = { 
+    id: 1,
+    name: 'producto 1', 
+    image: "https://www.google.com/aclk?sa=l&ai=DChcSEwjzvtu9k6n4AhUYQkgAHT5XDvMYABABGgJjZQ&sig=AOD64_2SqsKLQ1UQg4zycN7yMueVtskRig&adurl&ctype=5&ved=2ahUKEwjG0dC9k6n4AhWiDNQKHfL1C1UQvhd6BAgBEEo", 
+    descripcion: 'descripcion producto 1'
+}
+
+export const traerProducto = ()=> {
+    return new Promise ((resolve, reject)=>
+    {
+        setTimeout(()=>{
+            resolve (producto);
+        }, 1000);
+    });
+};
+
+
+
 
 export default productos;
