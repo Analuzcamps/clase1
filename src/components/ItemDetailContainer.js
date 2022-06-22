@@ -18,8 +18,7 @@ const ItemDetailContainer = ()=> {
 
 console.log (producto);
 
-return 
-    <ItemDetail producto={producto}/>
+return <ItemDetail producto={producto}/>
 
 };
 

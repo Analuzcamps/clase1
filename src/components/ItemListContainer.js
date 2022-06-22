@@ -2,10 +2,14 @@ import React, { useEffect, useState } from 'react'
 import ItemCount from './ItemCount'
 import productos from '../utils/productos'
 import ItemList from './ItemList'
+import {useParams} from 'react-router-dom'
 
 
 const ItemListContainer = ({greeting})=> {
   const [Item, setItems] = useState([])
+
+  const resultado= useParams()
+  console.log(resultado.categroy)
 
   useEffect(() => {
 
@@ -32,6 +36,8 @@ const ItemListContainer = ({greeting})=> {
 
 }
   
+
+
    
 
 

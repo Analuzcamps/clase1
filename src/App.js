@@ -5,24 +5,22 @@ import Main from './components/Main' ;
 import Footer from './components/Footer';
 import NavBar from './components/NavBar' ;
 import ItemDetailContainer from './components/ItemDetailContainer';
+import {BrowserRouter, Routes, Route, } from 'react-router-dom'
 
 const App = () => {
     return (
-     <>
-
+     
+<BrowserRouter>
        <Header />
        <NavBar />
-       <>
-      <ItemListContainer 
-    greeting="Bienvenido al mundo del rodaje!" />
-    </>
-    <>
-    <ItemDetailContainer/> 
-    </>
+       <Routes>
+        <Route path= '/' element ={<ItemListContainer/>}/>
+        <Route/>
+       </Routes>
        <Main />
        <Footer />
-
-     </>
+</BrowserRouter>
+     
 
     ) ;
 } ;
