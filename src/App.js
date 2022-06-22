@@ -13,11 +13,14 @@ const App = () => {
 <BrowserRouter>
        <Header />
        <NavBar />
-       <Routes>
-        <Route path= '/' element ={<ItemListContainer/>}/>
-        <Route/>
-       </Routes>
        <Main />
+       <Routes>
+        <Route path="/" element={<h1>HOME</h1>}/>
+        <Route path="/category/:Id" element={ <ItemListContainer 
+    greeting="Bienvenido al mundo del rodaje!" />}/>
+    <Route path="/detail/:id" element={ <ItemDetailContainer/>}/>
+   
+      </Routes>
        <Footer />
 </BrowserRouter>
      

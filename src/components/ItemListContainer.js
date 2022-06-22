@@ -8,8 +8,9 @@ import {useParams} from 'react-router-dom'
 const ItemListContainer = ({greeting})=> {
   const [Item, setItems] = useState([])
 
-  const resultado= useParams()
-  console.log(resultado.categroy)
+  const {Id}= useParams()
+  console.log(Id.category)
+  console.log(Id.details)
 
   useEffect(() => {
 
@@ -22,7 +23,7 @@ const ItemListContainer = ({greeting})=> {
     MockAsync.then(productos => { 
       setItems(productos) 
     })
-  }, [])
+  }, [Id])
   
 
  return (
