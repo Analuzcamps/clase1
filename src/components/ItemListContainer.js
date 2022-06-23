@@ -10,7 +10,6 @@ const ItemListContainer = ({greeting})=> {
 
   const {Id}= useParams()
   console.log(Id.category)
-  console.log(Id.details)
 
   useEffect(() => {
 
