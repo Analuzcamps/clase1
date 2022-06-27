@@ -8,14 +8,13 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter, Routes, Route, } from 'react-router-dom'
 import Carrito from './components/Carrito';
 import Checkout from './components/Checkout';
+import {MiProvider} from './components/MiContexto';
 
 const App = () => {
     return (
      
 <BrowserRouter>
-        <Header />
-        <NavBar />
-        <Main />
+<NavBar />
         <Routes>
             <Route path="/" element={<h1>HOME</h1>}/>
             <Route path="/category/:Id" element={ <ItemListContainer greeting="Bienvenido al mundo del rodaje!" />} />
@@ -23,6 +22,11 @@ const App = () => {
             <Route path="/carrito" element={ <Carrito/>}/>
             <Route path="/checkout" element={ <Checkout/>}/>
         </Routes>
+<MiProvider>
+    <Header/>
+    <Main/>
+</MiProvider>
+        
         <Footer />
 </BrowserRouter>
      

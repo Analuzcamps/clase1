@@ -8,7 +8,6 @@ const NavBar = () => {
 
     <nav>
 <NavLink to="/">  Home </NavLink>
-<NavLink to="/carrito"> Carrito</NavLink>
 <NavLink to="/category/camara"> Cámaras</NavLink>
 <NavLink to="/category/luz">Luces</NavLink>
 <NavLink to="/category/micro"> Micrófonos</NavLink>
