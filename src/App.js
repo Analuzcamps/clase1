@@ -7,7 +7,7 @@ import NavBar from './components/NavBar' ;
 import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter, Routes, Route, } from 'react-router-dom'
 import Carrito from './components/Carrito';
-import Checkout from './components/Checkout';
+import Cart from './components/Cart';
 import {MiProvider} from './components/MiContexto';
 
 const App = () => {
@@ -16,11 +16,13 @@ const App = () => {
 <BrowserRouter>
 <NavBar />
         <Routes>
-            <Route path="/" element={<h1>HOME</h1>}/>
-            <Route path="/category/:Id" element={ <ItemListContainer greeting="Bienvenido al mundo del rodaje!" />} />
+            <Route path="/" element={<ItemListContainer greeting='Bienvenido al mundo del Rodaje!'/>}/>
+            <Route 
+                   path="/category/:Id" 
+                   element={ <ItemListContainer greeting="Bienvenido al mundo del rodaje!" />} />
             <Route path="/detail/:id" element={ <ItemDetailContainer/>}/>
             <Route path="/carrito" element={ <Carrito/>}/>
-            <Route path="/checkout" element={ <Checkout/>}/>
+            <Route path="/Cart" element={ <Cart/>}/>
         </Routes>
 <MiProvider>
     <Header/>

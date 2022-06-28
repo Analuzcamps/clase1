@@ -5,7 +5,7 @@ const Carrito = () => {
   return (
     <>
     <h1>Carrito</h1>
-    <Link to="/Checkout"> Proceder con la compra</Link>
+    <Link to="/Cart"> Proceder con la compra</Link>
 
     </>
 

@@ -1,10 +1,6 @@
-//solo va a mapear lo que hagamos e item.js 
+
 import React from 'react'
 import Item from './Item'
-
-
-
-//nos va a traer cuantas cards de productos tengamos
 
 const ItemList = ({productos}) => {
   return (

@@ -25,7 +25,7 @@ const ItemDetail = ({producto}) => {
      <> 
         <h3> gracias por comprar</h3>
         <> 
-        <Link to={"./Cart"}> 
+        <Link to={"/Cart"}> 
         <button> terminar compra </button>
         </Link>
         </>
