@@ -11,11 +11,11 @@ export const MiProvider = ({children}) => {
     const [precio_total, setPrecioTotal] = useState(0)
 
     const agregarProducto = (producto) => {
-        //setCarrito()
+       
     }
 
     const eliminarProducto = (producto) => {
-        //setCarrito()
+        //const cleanCart = () => setCarrito([])
     }
 
     const actualizarCantidad = (producto, cantidad) => {
@@ -28,8 +28,7 @@ export const MiProvider = ({children}) => {
         carrito : carrito,
         cantidad_total : cantidad_total,
         precio_total : precio_total,
-        //setCarrito : setCarrito,
-        agregarProducto : agregarProducto,
+        agregarProducto : agregarProducto, 
     }
 
 

@@ -14,8 +14,10 @@ const App = () => {
     return (
      
 <BrowserRouter>
-<NavBar />
-        <Routes>
+
+     <MiProvider>
+        <NavBar />
+           <Routes>
             <Route path="/" element={<ItemListContainer greeting='Bienvenido al mundo del Rodaje!'/>}/>
             <Route 
                    path="/category/:Id" 
@@ -23,10 +25,10 @@ const App = () => {
             <Route path="/detail/:id" element={ <ItemDetailContainer/>}/>
             <Route path="/carrito" element={ <Carrito/>}/>
             <Route path="/Cart" element={ <Cart/>}/>
-        </Routes>
-<MiProvider>
-    <Header/>
-    <Main/>
+            </Routes>
+
+        <Header/>
+         <Main/>
 </MiProvider>
         
         <Footer />
