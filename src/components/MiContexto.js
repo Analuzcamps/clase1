@@ -7,35 +7,55 @@ const Provider = contexto.Provider
 
 export const MiProvider = ({children}) => {
     const [carrito, setCarrito] = useState([])
-    const [cantidad_total, setCantidadTotal] = useState(0)
-    const [precio_total, setPrecioTotal] = useState(0)
 
-    const agregarProducto = (producto) => {
-       
+    const agregarProducto = (producto, cantidadSeleccionada) =>{
+      if (isOnCart(producto.id)){
+        sumarCantidad(producto,cantidadSeleccionada)
+      } else {  setCarrito([...carrito, { ...producto, cantidadSeleccionada }]);
+    }}
     }
+    const isOnCart = (id) => carrito.some((prod) => prod.id === id);
 
-    const eliminarProducto = (producto) => {
-        //const cleanCart = () => setCarrito([])
-    }
+    const sumarCantidad = (producto, cantidadSeleccionada) => {
+        const newProducts = carrito.map((prod) => {
+            if (prod.id === producto.id) {
+                const newProduct = {
+                    ...prod,
+                    cantidadSeleccionada: prod.cantidadSeleccionada + cantidadSeleccionada,
+                };
+                return newProduct;
+            } else {
+                return prod;
+            }
+        });
+        setCarrito(newProducts);
+    };
 
-    const actualizarCantidad = (producto, cantidad) => {
-        //setCarrito()
-    }
 
-    const vaciarCarrito = () => {}
+
+    const eliminarProducto = (id) => {
+        setCarrito(carrito.filter((prod) => prod.id !== id));
+    };
+
+
+
+    const vaciarCarrito = (_) => {
+         setCarrito([]);
+    
 
     const valorDelContexto = {
-        carrito : carrito,
-        cantidad_total : cantidad_total,
-        precio_total : precio_total,
-        agregarProducto : agregarProducto, 
+        eliminarProducto: eliminarProducto, 
+        vaciarCarrito: vaciarCarrito, 
+      
+        
+
     }
 
 
     return (
         <Provider value={valorDelContexto}>
-            {children}
+            ({children})
         </Provider>
     )
-}
 
+    }

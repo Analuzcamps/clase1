@@ -1,16 +1,19 @@
-import React from 'react'
-import ItemCount from './ItemCount'
-import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import ItemCount from './ItemCount';
+import { useState, useContext } from 'react';
+import {Link} from 'react-router-dom';
+import { MiProvider } from './MiContexto';
 
 const ItemDetail = ({producto}) => {
 
   const [renderCount, setRenderCount]= useState(false);
+  const {agregarProducto}=useContext(MiProvider);
 
   const onAdd = (cantidadSeleccionada)=> {
 
     console.log("Desde item detail : " + cantidadSeleccionada);
     setRenderCount(true);
+    agregarProducto(producto, cantidadSeleccionada);
 
   }; 
 
