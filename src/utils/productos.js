@@ -9,6 +9,7 @@ const productos= [
        image: "" , 
        descripcion: 'descripcion producto ' ,
        category:'camara' ,
+       price:'80000',
 },
 
 {
@@ -17,6 +18,7 @@ const productos= [
    image: "",
    descripcion: 'descripcion producto ' ,
    category:'camara' ,
+   price:'90000',
 },
 {
     id: 3,
@@ -24,6 +26,7 @@ const productos= [
     image: "" ,
     descripcion: 'descripcion producto ' ,
     category:'camara' ,
+    price:'70000',
     },
 
     {
@@ -32,6 +35,7 @@ const productos= [
         image:"", 
         descripcion: 'descripcion producto ' ,
         category:'camara' ,
+        price:'60000',
  },
 
  {
@@ -40,6 +44,7 @@ const productos= [
     image: "", 
     descripcion: 'descripcion producto ' , 
     category:'camara' ,
+    price:'110000',
 },
 
 {
@@ -48,6 +53,7 @@ const productos= [
     image: "", 
     descripcion: 'descripcion producto ' ,
     category:'accesorio' ,
+    price:'50000',
 },
 
 {
@@ -56,6 +62,7 @@ const productos= [
     image:"",  
     descripcion: 'descripcion producto ' ,
     category:'accesorio' ,
+    price:'60000',
 },
 
 {
@@ -64,6 +71,7 @@ const productos= [
     image:"", 
     descripcion: 'descripcion producto ' ,
     category:'luz' ,
+    price:'90000',
 },
 
 {
@@ -72,6 +80,7 @@ const productos= [
     image: "", 
     descripcion: 'descripcion producto ' ,
     category:'luz' ,
+    price:'80000',
 },
 
 {
@@ -80,6 +89,7 @@ const productos= [
     image: "", 
     descripcion: 'descripcion producto ' ,
     category:'luz' ,
+    price:'25000',
 },
 
 {
@@ -88,6 +98,7 @@ const productos= [
     image: "", 
     descripcion: 'descripcion producto ' ,
     category:'micro' ,
+    price:'15000',
 },
 
 {
@@ -96,7 +107,8 @@ const productos= [
     image: "", 
     descripcion: 'descripcion producto ' ,
     category:'micro' ,
-},
+    price:'11000',
+}, 
 
 {
     id: 13,
@@ -104,6 +116,7 @@ const productos= [
     image:"" , 
     descripcion: 'descripcion producto ' ,
     category:'micro' ,
+    price:'70000',
 },
 
 ]
@@ -115,6 +128,8 @@ const producto = {
     descripcion: 'descripcion producto CON DETALLE',
     precio:'17000',
     category:'camara' ,
+    price:'80000',
+
 
 }
 

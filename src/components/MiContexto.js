@@ -1,4 +1,5 @@
 import { createContext, useState } from "react"
+import Carrito from "./Carrito"
 
 export const contexto = createContext()
 
@@ -13,7 +14,6 @@ export const MiProvider = ({children}) => {
         sumarCantidad(producto,cantidadSeleccionada)
       } else {  setCarrito([...carrito, { ...producto, cantidadSeleccionada }]);
     }}
-    }
     const isOnCart = (id) => carrito.some((prod) => prod.id === id);
 
     const sumarCantidad = (producto, cantidadSeleccionada) => {
@@ -31,30 +31,27 @@ export const MiProvider = ({children}) => {
         setCarrito(newProducts);
     };
 
-
-
     const eliminarProducto = (id) => {
         setCarrito(carrito.filter((prod) => prod.id !== id));
     };
 
-
-
     const vaciarCarrito = (_) => {
          setCarrito([]);
-    
+    }
 
     const valorDelContexto = {
         eliminarProducto: eliminarProducto, 
         vaciarCarrito: vaciarCarrito, 
-      
-        
+        agrergarProducto: agregarProducto,
+        carrito: carrito, 
 
+      
     }
 
 
     return (
         <Provider value={valorDelContexto}>
-            ({children})
+            {children}
         </Provider>
     )
 
