@@ -6,7 +6,7 @@ import  {contexto} from './MiContexto'
 
 const Cart = () => {
 
-  const {carrito, eliminarProducto} = useContext(contexto);
+  const {carrito, eliminarProducto, vaciarCarrito} = useContext(contexto);
 
   return (
     <>
@@ -30,7 +30,7 @@ const Cart = () => {
                     ))}
                           <> 
 
-                             <button onClick={eliminarProducto}>Vaciar carrito</button>
+                             <button onClick={vaciarCarrito}>Vaciar carrito</button>
                           </>
                
             </>
