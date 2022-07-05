@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import productos from '../utils/productos' ;
 import ItemList from './ItemList' ;
 import {useParams} from 'react-router-dom' ;
-
+import {db} from './firebase.js'
+import {getDocs, collection, query, where} from 'firebase/firestore'
 
 const ItemListContainer = ({greeting})=> {
   const [Item, setItems] = useState([]);
@@ -12,7 +13,44 @@ const ItemListContainer = ({greeting})=> {
 
   useEffect(() => {
 
-   const MockAsync = new Promise((resolve) => {
+    const collectionProductos = collection (db, "Id")
+
+    const ref = Id
+    ? query(collectionProductos, where ('category', '==', 'Id')) 
+    : collectionProductos ;
+
+const consulta= getDocs(collectionProductos)
+
+consulta 
+  .then((resultado)=>{
+  
+    const productosMapeados = resultado.docs.map(referencia=>{
+      const aux = referencia.data()
+      aux.id = referencia.id
+      return aux
+    })
+
+    setItems(productosMapeados)
+  })
+  .catch((error)=>{
+    console.log (error)
+  })
+
+  }, [Id]);
+
+
+  return (
+    <>
+    <h2>{greeting}</h2>
+    <ItemList productos={Item}/>
+    
+  </>
+  )
+
+}
+
+
+   /*const MockAsync = new Promise((resolve) => {
       setTimeout(() => {
         resolve(productos)
       }, 3000);
@@ -33,10 +71,10 @@ const ItemListContainer = ({greeting})=> {
       setItems (productos);
     }
     });
-  }, [Id]);
+  }, [Id]); */
   
 
- return (
+ /*return (
       <>
 
       <h2>{greeting}</h2>
@@ -44,9 +82,9 @@ const ItemListContainer = ({greeting})=> {
 
     </>
       
-    );
+    );*/
 
-};
+
   
 
 
