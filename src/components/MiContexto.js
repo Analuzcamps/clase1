@@ -42,7 +42,7 @@ export const MiProvider = ({children}) => {
     const valorDelContexto = {
         eliminarProducto: eliminarProducto, 
         vaciarCarrito: vaciarCarrito, 
-        agrergarProducto: agregarProducto,
+        agregarProducto: agregarProducto,
         carrito: carrito, 
 
       
