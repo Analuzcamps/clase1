@@ -1,5 +1,4 @@
 import { createContext, useState } from "react"
-import Carrito from "./Carrito"
 
 export const contexto = createContext()
 

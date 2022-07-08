@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import productos from "../utils/productos"
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import {db} from './firebase'
-import {getDoc, collection} from 'firebase/firestore'
+import {db} from '../firebase'
+import {getDoc} from 'firebase/firestore'
 
 const ItemDetailContainer =()=> {
   const [item, setItem] = useState({})
@@ -12,9 +12,9 @@ const ItemDetailContainer =()=> {
 
   useEffect(() => {
 
-const ref= doc(collectionProductos, id);
+const ref= getDoc(db, id);
 getDoc(ref)
-.then((respuesta=>{
+.then((response=>{
   setItem({
     id: response.id , 
     ...response.data(), 
@@ -22,7 +22,7 @@ getDoc(ref)
   });
 })); 
   }, [id]);
-  return <ItemDetail item={item}/>
+  return <ItemDetail item={item}/>;
 };
 
 
