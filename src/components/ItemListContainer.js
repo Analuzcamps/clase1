@@ -12,7 +12,7 @@ const ItemListContainer = ({greeting})=> {
 
   useEffect(() => {
 
-    const collectionProductos = collection (db, "Id")
+    const collectionProductos = collection (db, "productos")
 
     const ref = Id
     ? query(collectionProductos, where ('category', '==', 'Id')) 
