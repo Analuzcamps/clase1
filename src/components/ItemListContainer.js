@@ -15,7 +15,7 @@ const ItemListContainer = ({greeting})=> {
     const collectionProductos = collection (db, "productos")
 
     const ref = Id
-    ? query(collectionProductos, where ('category', '==', 'Id')) 
+    ? query(collectionProductos, where ('category', '==', Id)) 
     : collectionProductos ;
 
 const consulta= getDocs(collectionProductos)
