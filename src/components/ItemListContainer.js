@@ -18,7 +18,7 @@ const ItemListContainer = ({greeting})=> {
     ? query(collectionProductos, where ('category', '==', Id)) 
     : collectionProductos ;
 
-const consulta= getDocs(collectionProductos)
+const consulta= getDocs(ref)
 
 consulta 
   .then((resultado)=>{
