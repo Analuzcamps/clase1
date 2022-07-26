@@ -3,7 +3,7 @@ import React from 'react' ;
 const Header = () => {
     return (
         <header>
-            <h1> El Mundo Del Rodaje (aparezco aunque haya provider) </h1>
+            <h1> El Mundo Del Rodaje</h1>
         </header>
     ) ;
 } ;
